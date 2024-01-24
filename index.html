@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/eqz0ptw.css" />
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #e3ebf6;
+        font-family: neue-haas-grotesk-display, sans-serif;
+      }
+      #whale {
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        opacity: 01;
+        z-index: -10;
+      }
+
+      .circle-container {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .circle__container {
+        height: 80px;
+      }
+
+      .circle {
+        position: relative;
+        top: -60px;
+        border-radius: 50%;
+        border: 3px solid #020d1e;
+        opacity: 0;
+        transform: scale(0);
+        animation: fadeInScale 1s forwards, bounce 1s infinite alternate;
+      }
+      .date {
+        right: 25vw;
+        text-align: right;
+        width: 200px;
+        color: #acacac;
+        position: absolute;
+        height: 0px;
+        font-size: 2em;
+      }
+      .ice-area {
+        position: relative;
+        top: -20px;
+        color: #acacac;
+        height: 0px;
+        font-size: 14px;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(10px);
+        }
+      }
+
+      @keyframes fadeInScale {
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 4.5em;
+        padding: 4px 64px;
+        border-radius: 100px;
+        border: 3px solid #020d1e;
+        background-color: #020d1e;
+        font-weight: 600px;
+        color: white;
+        margin: 0px;
+        margin-top: 64px;
+      }
+      p {
+        text-align: center;
+        font-size: 1.5em;
+        color: #acacac;
+      }
+      h2 {
+        margin-top: 80px;
+        text-align: center;
+        font-size: 3em;
+        color: #acacac;
+      }
+      span {
+        color: #020d1e;
+      }
+
+      .artic-ice-img {
+        width: 30%;
+      }
+
+      .artic-img__container {
+        display: flex;
+        justify-content: center;
+        margin: 60px 0px;
+      }
+      @media screen and (max-width: 768px) {
+        .circle__container {
+          transform: scale(0.5); /* Adjust the values as needed */
+        }
+
+        h1 {
+          font-size: 2em;
+          padding: 4px 32px;
+          margin-top: 32px;
+        }
+
+        h2 {
+          font-size: 2em;
+          margin-top: 32px;
+        }
+
+        p {
+          font-size: 1.2em;
+        }
+  .date {
+    right: -200px;
+    text-align: right;
+    font-size: 2em;
+  }
+  .ice-area {
+    top: 0;
+    font-size: 0.9em;
+  }
+
+      .artic-img__container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .artic-ice-img {
+        width: 100%;
+        max-width: 300px; /* Adjust the max-width as needed */
+        margin-bottom: 16px;
+      }
+
+      img[width="40px"] {
+        width: 30px; /* Adjust the width as needed */
+        height: auto;
+      }
+      .artic-ice__arrow {
+        rotate: 90deg;
+      }
+        
+      }
+
+@media screen and (max-width: 480px) {
+  .circle__container {
+    transform: scale(0.6); /* Adjust the values as needed */
+  }
+
+  h1 {
+    font-size: 1.5em;
+    padding: 4px 16px;
+    margin-top: 24px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin-top: 16px;
+  }
+
+  p {
+    font-size: 1em;
+  }
+  .date {
+    right: -200px;
+    text-align: right;
+    font-size: 2em;
+  }
+  .ice-area {
+    top: 0;
+    font-size: 0.9em;
+  }
+        .artic-img__container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .artic-ice-img {
+        width: 100%;
+        max-width: 250px; /* Adjust the max-width as needed */
+        margin-bottom: 16px;
+      }
+
+      img[width="40px"] {
+        width: 15px; /* Adjust the width as needed */
+        height: auto;
+      }
+}
+    </style>
+  </head>
+  <body>
+    <div id="whale"></div>
+    <div style="display: flex; justify-content: center;">
+      <h1>The Artic Ice Is Melting</h1>
+    </div>
+    <p>
+      Measured every year in september <br />
+      in million km²
+    </p>
+      <div id="circleContainer" class="circle-container"></div>
+    </div>
+    <h2>
+      From <span>7.7 million km²</span> in 1980 <br />
+      to <span>4 million km²</span> in 2020
+    </h2>
+    <div class="artic-img__container">
+      <img class="artic-ice-img" src="./assets/Asset 10.svg" alt="artic ice 2020 jules docx">
+      <img class="artic-ice__arrow" src="./assets/arrow_right.svg" width="40px" alt="arrow right material icon">
+      <img class="artic-ice-img" style="padding-left: 40px;" src="./assets/Asset 9.svg" alt="artic ice 2020 jules docx">
+    </div>
+    <p>Act now</p>
+    <script src="index.js"></script>
+    <script src="orca.js"></script>
+  </body>
+  </html>
+
+
+
